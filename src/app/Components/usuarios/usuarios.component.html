@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">E-Mail</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of Usuarios; let i = index">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>{{ usuario.nombre }}</td>
+                        <td>{{ usuario.email }}</td>
+                        <td>{{ usuario.telefono }}</td>
+                        <td>
+                            <button (click)="eliminarUsuario(usuario)" class="btn btn-outline-danger">X</button>
+                            <a [routerLink]="[ '/usuario', usuario.id ]" class="btn btn-outline-primary">Ver</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

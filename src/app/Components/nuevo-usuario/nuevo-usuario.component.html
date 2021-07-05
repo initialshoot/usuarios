@@ -1,0 +1,21 @@
+<form [formGroup]="formUsuario" (ngSubmit)="onSubmit()" novalidate>
+
+    <div class="mb-3">
+        <label for="">Nombre</label>
+        <input type="text" formControlName="name" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="">E-mail</label>
+        <input type="email" formControlName="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="">Telefono</label>
+        <input type="text" formControlName="telefono" class="form-control" required>
+    </div>
+
+    <div class="mb-3 text-center">
+        <button type="submit" class="btn btn-outline-primary">Guardar</button>
+    </div>
+</form>
